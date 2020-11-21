@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">Login Form</div>
+        <form action="#">
+            <input type="text" placeholder="Email or Username" required>
+            <i class="far fa-envelope"></i>
+            <input id="password" type="password" placeholder="Password" required>
+            <i class="fas fa-lock" onclick="show()"></i>
+            <input type="submit" value="Sign in">
+            <a href="#">Forgot Password?</a>
+        </form>
+    </div>
+    <script>
+        function show() {
+            var pw = document.getElementById('password');
+            var icon = document.querySelector('.fas');
+            if (pw.type === "password") {
+                pw.type = "text";
+                pw.style.marginTop = "20px";
+                icon.style.color = "#7f2092";
+            } else {
+                pw.type = "password";
+                icon.style.color = "grey";
+            }
+        }
+    </script>
+</body>
+
+</html>
